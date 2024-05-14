@@ -10,32 +10,37 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
-let questions = [
-    {
-        question: 'Which country does BMW originate from?',
-        choice1: 'England',
-        choice2: 'Germany',
-        choice3: 'France',
-        choice4: 'Italy',
-        answer: 2,
-    },
-    {
-        question: 'Which country does Rolls Royce originate from?',
-        choice1: 'England',
-        choice2: 'Germany',
-        choice3: 'France',
-        choice4: 'Italy',
-        answer: 1,
-    },
-    {
-        question: 'Which country does Alfa Romeo originate from?',
-        choice1: 'England',
-        choice2: 'Germany',
-        choice3: 'France',
-        choice4: 'Italy',
-        answer: 4,
-    },
-];
+let questions = [];
+
+fetch('https://opentdb.com/api.php?amount=10&category=28&difficulty=easy&type=multiple')
+    .then((res) => {
+        return res.json();
+    })
+    .then((loadedQuestions) => {
+        questions = loadedQuestions.results.map((loadedQuestions) => {
+            const formattedQuestion = {
+                question: loadedQuestions.question,
+            };
+
+            const answerChoices = [...loadedQuestions.incorrect_answers];
+            formattedQuestion.answer = Math.floor(Math.random() * 4) + 1;
+            answerChoices.splice(
+                formattedQuestion.answer - 1,
+                0,
+                loadedQuestions.correct_answer
+            );
+
+            answerChoices.forEach((choice, index) => {
+                formattedQuestion['choice' + (index + 1)] = choice;
+            });
+
+            return formattedQuestion;
+        });
+        startGame();
+    })
+    .catch((err) => {
+        console.error(err);
+    });
 
 //CONSTANTS
 const CORRECT_BONUS = 10;
@@ -81,18 +86,18 @@ choices.forEach((choice) => {
         const selectedAnswer = selectedChoice.dataset['number'];
 
         const classToApply =
-          selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
+            selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
 
         if (classToApply === "correct") {
             incrementScore(CORRECT_BONUS);
         }
-        
+
         selectedChoice.parentElement.classList.add(classToApply);
 
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply);
             getNewQuestion();
-        }, 1000); 
+        }, 1000);
     });
 });
 
@@ -100,5 +105,3 @@ incrementScore = num => {
     score += num;
     scoreText.innerText = score;
 };
-
-startGame()
