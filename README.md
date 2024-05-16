@@ -17,10 +17,12 @@ When you first arrive to the questionaire you will see the **Play** button and t
 
 - __The Game Area__
     - This section will allow the user to play the Turbo Quiz. The user will be able to easily see the question and choices.
+    - The user will be able to see how many points they have recieved and the progression of the quiz.
+
+![Game Area](./images/Question-page.png)
+
+- __The Question section__
+    - The question section is where the user will be able to see the randomized question rating from easy to difficult.
     - The user will be able to select the correct answer, if answered correctly, will display green, if incorrect will display red.
 
-![Question Area](./images/Question-page.png)
-
-
-
-[def]: ./images/heading.png
+![Question section](./images/)
