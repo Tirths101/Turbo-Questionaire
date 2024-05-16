@@ -30,4 +30,6 @@ When you first arrive to the questionaire you will see the **Play** button and t
 - __The Score Area__
     - This section will allow the user to see exactly how many correct and incorrect answered they have provided.
 
-![Score](./images/)
+![Score](./images/Score.png)
+
+
