@@ -25,4 +25,9 @@ When you first arrive to the questionaire you will see the **Play** button and t
     - The question section is where the user will be able to see the randomized question rating from easy to difficult.
     - The user will be able to select the correct answer, if answered correctly, will display green, if incorrect will display red.
 
-![Question section](./images/)
+![Question section](./images/Question-section.png)
+
+- __The Score Area__
+    - This section will allow the user to see exactly how many correct and incorrect answered they have provided.
+
+![Score](./images/)
