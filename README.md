@@ -13,7 +13,7 @@ When you first arrive to the questionaire you will see the **Play** button and t
 - __The Turbo Quiz Logo and Heading__
     - Featured at the top of the page, the Turbo Quiz logo and heading is easy to see for the user. Upon viewing the page, the user will be able to see the name of the game.
 
-![Logo](./images/)
+![Logo](./images/Heading.png)
 
 - __The Game Area__
     - This section will allow the user to play the Turbo Quiz. The user will be able to easily see the question and choices.
@@ -21,3 +21,6 @@ When you first arrive to the questionaire you will see the **Play** button and t
 
 ![Question Area](./images/Question-page.png)
 
+
+
+[def]: ./images/heading.png
