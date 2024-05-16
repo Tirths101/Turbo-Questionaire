@@ -12,10 +12,12 @@ When you first arrive to the questionaire you will see the **Play** button and t
 
 - __The Turbo Quiz Logo and Heading__
     - Featured at the top of the page, the Turbo Quiz logo and heading is easy to see for the user. Upon viewing the page, the user will be able to see the name of the game.
+
 ![Logo](./images/)
 
 - __The Game Area__
     - This section will allow the user to play the Turbo Quiz. The user will be able to easily see the question and choices.
     - The user will be able to select the correct answer, if answered correctly, will display green, if incorrect will display red.
+
 ![Question Area](./images/Question-page.png)
 
